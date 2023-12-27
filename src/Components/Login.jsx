@@ -23,11 +23,10 @@ function Login() {
   }
 
    const validationCheck=()=>{
-    console.log(email.current.value)
-    console.log(password.current.value)
+    
     const message=validation(email.current.value,password.current.value);
     setErrorMessages(message)
-    console.log(message)
+    
    
    if(message){
     return

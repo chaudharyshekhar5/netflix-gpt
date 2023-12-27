@@ -13,7 +13,7 @@ function Header() {
   const Navigate=useNavigate()
   const dispatch=useDispatch()
   const user=useSelector((store)=>store.user)
-  console.log(user)
+  
 
   const checkSignout=()=>{
     signOut(auth).then(() => {
@@ -51,21 +51,21 @@ return ()=>unsubscribe()
 },[]);
 
   
-  return (<>
-      <div className=' flex flex-wrap justify-between absolute z-10 w-screen  bg-gradient-to-b from-black'>
-        <img className='w-48 h-24 ml-8 mt-1 px-2  from-black' src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png" alt="Netflix_logo" />
+  return (
+      <div className=' absolute w-screen px-8 py-2 bg-gradient-to-b from-gray-700 z-10 flex  justify-between'>
+        <img className='w-44  mx-auto md:mx-0' src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png" alt="Netflix_logo" />
       {user && (
-      <div className='flex flex-wrap justify-evenly z-10 items-center pr-6'>
-        <h1   className='text-white font-extrabold pr-5 text-2xl'>Welcome -  {user?.displayName} </h1>
-        {console.log("hello " + user?.displayName)}
+      <div className='flex p-2 justify-between'>
+        <h1   className='text-white font-extrabold pr-5 self-center text-2xl'>Welcome -  {user?.displayName} </h1>
+        
       <>
-      <img className="  h-10" src="https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.jpg" alt="Account-logo" />
-      <button onClick={checkSignout} className='text-white px-2 rounded ml-2 bg-green-400'>Sign Out</button>
+      <img className="hidden md:block w-10 h-10 self-center" src="https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.jpg" alt="Account-logo" />
+      <button onClick={checkSignout} className="font-bold text-sm align-middle text-white bg-green-300 h-7 self-center px-3 py-0 rounded ml-1 ">Sign Out</button>
       </>
       </div>
       )}
       </div>
-      </>
+      
       
 
   )
