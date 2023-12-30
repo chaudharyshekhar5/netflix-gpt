@@ -92,12 +92,12 @@ signInWithEmailAndPassword(auth,email.current.value,password.current.value)
     <div >
       <Header/>
       <div className='absolute '>
-        <img className="h-screen
+        <img className="h-screen  self-center
         sm:h-screen w-screen
         md:h-screen w-screen
         " src={Bg_photo}alt="logo"></img>
       </div>
-      <form onSubmit={(e)=>e.preventDefault()} className=' absolute bg-black w-10/12 mx-auto my-36 right-0 left-0 rounded-lg bg-opacity-80 
+      <form onSubmit={(e)=>e.preventDefault()} className=' absolute bg-black w-10/12 mx-auto my-36 right-0 left-0 rounded-lg bg-opacity-80 self-center
       sm:w-10/12 self-center 
       md:w-7/12 my-60 self-center
       lg:w-5/12  self-center
