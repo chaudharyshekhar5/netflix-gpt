@@ -59,18 +59,16 @@ return ()=>unsubscribe()
 
   
   return (
-      <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-gray-900 z-10 flex  justify-between'>
-        <img className= 'mx-[5%] 
-        sm:w-24 mx-[5%]
-        md:w-44  mx-auto md:mx-0'
+      <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between'>
+        <img className='w-44 mx-auto md:mx-0'
          src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png" alt="Netflix_logo" />
       {user && (
       <div className='flex p-2 justify-between'>
-        <h1   className='text-white font-extrabold pr-5 self-center text-2xl'>Welcome -  {user?.displayName} </h1>
-        <button className='self-center border  hover:bg-black p-1 px-2 mr-2 font-lg font-medium bg-green-300 text-white' onClick={toggleGpt}>{gpt? "Home Page" :"Movies Search"}</button>
+        <h1   className='p-2 px-3 m-2 bg-gray-900 text-white'>Welcome -  {user?.displayName} </h1>
+        <button className='py-2 px-4 mx-4 my-2 bg-purple-800 text-white rounded-lg' onClick={toggleGpt}>{gpt? "Home Page" :"Movies Search"}</button>
       <>
-      <img className="hidden md:block w-10 h-10 self-center" src="https://th.bing.com/th/id/OIG.NXyKVTh7C.VxVr1if8UE?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Account-logo" />
-      <button onClick={checkSignout} className="font-bold hover:bg-black  border text-sm align-middle text-white bg-green-300 h-7 self-center px-3 py-0  ml-1 ">Sign Out</button>
+      <img className="hidden md:block w-12 h-12" src="https://th.bing.com/th/id/OIG.NXyKVTh7C.VxVr1if8UE?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Account-logo" />
+      <button onClick={checkSignout} className="font-bold pl-2 text-white">Sign Out</button>
       </>
       </div>
       )}
