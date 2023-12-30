@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { options } from '../Utils/Constant';
 import { useDispatch } from 'react-redux';
 import {  addpopularMovies } from '../Utils/MoviesSlice';

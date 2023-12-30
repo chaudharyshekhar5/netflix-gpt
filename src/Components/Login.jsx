@@ -3,11 +3,10 @@ import Header from './Header'
 import {validation} from "../Utils/Validate"
 import { createUserWithEmailAndPassword ,signInWithEmailAndPassword,updateProfile} from "firebase/auth";
 import { auth } from '../Utils/Firebase';
-import { useNavigate } from 'react-router-dom';
 import { addUser } from '../Utils/UserSlice';
 import { useDispatch } from 'react-redux';
+import { Bg_photo } from '../Utils/Constant';
 function Login() {
-  const Navigate=useNavigate()
   const dispatch=useDispatch()
   const [isSignIn,setIsSignIn]=useState(true);
   const [errorMessages,setErrorMessages]=useState(null)
@@ -93,7 +92,7 @@ signInWithEmailAndPassword(auth,email.current.value,password.current.value)
     <div>
       <Header/>
       <div className='absolute'>
-        <img src="https://assets.nflxext.com/ffe/siteui/vlv3/563192ea-ac0e-4906-a865-ba9899ffafad/6b2842d1-2339-4f08-84f6-148e9fcbe01b/IN-en-20231218-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="logo"></img>
+        <img src={Bg_photo}alt="logo"></img>
       </div>
       <form onSubmit={(e)=>e.preventDefault()} className=' absolute bg-black w-3/12 mx-auto my-36 right-0 left-0 rounded-lg bg-opacity-80'>
         <h1 className='text-center mt-7 mb-4 text-white font-bold text-2xl'>{isSignIn?"Sign in": "Sign up"}</h1>

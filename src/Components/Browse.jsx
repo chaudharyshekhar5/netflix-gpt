@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Header from './Header'
-import { options } from '../Utils/Constant';
-import { useDispatch } from 'react-redux';
-import { addNowPlayingMovies } from '../Utils/MoviesSlice';
+import {  useSelector } from 'react-redux';
 import useNowPlayingMovies from '../hooks/useNowPlayingMovies'
 import MainContainer from './MainContainer';
 import SecondaryContainer from './SecondaryContainer';
 import usePopular from "../hooks/usePopular"
 import useTopRatedMovies from '../hooks/useTopRatedMovies';
 import useUpComingMovies from '../hooks/useUpComingMovies';
+import MovieGpt from './MovieGpt';
 function Browse() {
+  const gpt=useSelector(state=>state.gpt.gptToggleButton)
   useNowPlayingMovies();
   usePopular();
   useTopRatedMovies();
@@ -19,8 +19,14 @@ function Browse() {
   return (
     <div>
       <Header/>
+      {gpt?
+      <MovieGpt/>:
+    <>
       <MainContainer/>
       <SecondaryContainer/>
+      </>
+    }
+      
     </div>
   )
 }
