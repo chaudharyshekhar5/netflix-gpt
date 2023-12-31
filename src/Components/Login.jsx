@@ -100,7 +100,7 @@ signInWithEmailAndPassword(auth,email.current.value,password.current.value)
       // className='w-full md:w-3/12 absolute p-8 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80'>
       className='absolute bg-black mx-auto right-0 left-0 opacity-80  rounded-lg
       sssm:w-10/12 sssm:mt-[70%] sssm:px-0
-      ssm:w-8/12 ssm:mt-[60%] 
+      ssm:w-8/12 ssm:mt-[50%] 
       sm:mt-[45%]
       md:w-6/12  md:mt-[30%]
       lg:w-4/12 lg:mt-[20%]
@@ -111,7 +111,7 @@ signInWithEmailAndPassword(auth,email.current.value,password.current.value)
          sm:text-2xl
           md:text-lg'>{isSignIn?"Sign in": "Sign up"}</h1>
         {!isSignIn && <input  required type='text' ref={name}  placeholder='Username' className=' text-white p-3 min-w-[85%] mx-[7.5%] text-lg text-center  bg-gray-900 mb-[4%] rounded-md
-        ssm:text-sm ssm:mb-[2%] 
+        ssm:text-sm ssm:my-[4%] 
         sm:mb-[4%] sm:py-[2%]  
         md:text-lg'/>}
         <input  required type='text' ref={email} placeholder='Email address' className='text-white p-3 min-w-[85%] mx-[7.5%] text-lg text-center  bg-gray-900 mb-[4%] rounded-md
@@ -126,7 +126,7 @@ signInWithEmailAndPassword(auth,email.current.value,password.current.value)
         ssm:text-sm
         sm:mb-[2%]'>{errorMessages}</p>
         <button onClick={validationCheck}  className='py-2  text-white bold text-lg bg-red-700 min-w-[85%] mx-[7.5%] rounded-lg
-        ssm:text-sm 
+        ssm:text-sm ssm:mt-[4%]
         sm:mb-[2%]  
         md:px-4  '>{isSignIn?"Sign in": "Sign up"}</button>
         <p className=' text-center ssm:text-sm md:mx-[10%] my-3  mb-6 cursor-pointer text-white' onClick={toggleSignIn}>{isSignIn?"New to Netflix?": "Already Registered?"} <span className='text-yellow-200'>{isSignIn?"Sign up Now": "Sign in now"}</span></p>
