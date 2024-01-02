@@ -89,47 +89,33 @@ signInWithEmailAndPassword(auth,email.current.value,password.current.value)
    }}
   
   return (
-    <div >
+    <div  className='bg-black'>
       <Header/>
-      <div className='absolute '>
+      <div className='absolute'>
         <img className=' 
-        sssm:h-screen sssm:w-screen 
-        ' src={Bg_photo}alt="logo"></img>
+        hidden md:block
+        md:h-screen md:w-screen' src={Bg_photo}alt="logo"></img>
+        <img className=" w-screen h-screen md:hidden" src='https://w0.peakpx.com/wallpaper/410/412/HD-wallpaper-plain-black-black.jpg'></img>
       </div>
       <form onSubmit={(e)=>e.preventDefault()} 
       // className='w-full md:w-3/12 absolute p-8 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80'>
-      className='absolute bg-black mx-auto right-0 left-0 opacity-80  rounded-lg
-      sssm:w-10/12 sssm:mt-[70%] sssm:px-0
-      ssm:w-8/12 ssm:mt-[50%] 
-      sm:mt-[45%]
-      md:w-6/12  md:mt-[30%]
-      lg:w-4/12 lg:mt-[20%]
-      xl:w-4/12 xl:mt-[10%]'
+      className='absolute w-screen  mt-[40%] bg-black  md:h-block
+      md:absolute md:bg-black md:mx-auto md:right-0 md:left-0 md:opacity-80  md:rounded-lg md:w-4/12 md:mt-[13%]'
       >
-        <h1 className='font-bold text-white text-4xl py-3 text-center my-[4%]
-         ssm:text-xl 
-         sm:text-2xl
-          md:text-lg'>{isSignIn?"Sign in": "Sign up"}</h1>
-        {!isSignIn && <input  required type='text' ref={name}  placeholder='Username' className=' text-white p-3 min-w-[85%] mx-[7.5%] text-lg text-center  bg-gray-900 mb-[4%] rounded-md
-        ssm:text-sm ssm:my-[4%] 
-        sm:mb-[4%] sm:py-[2%]  
-        md:text-lg'/>}
-        <input  required type='text' ref={email} placeholder='Email address' className='text-white p-3 min-w-[85%] mx-[7.5%] text-lg text-center  bg-gray-900 mb-[4%] rounded-md
-        ssm:text-sm ssm:mb-[2%] 
-        sm:mb-[4%] sm:py-[2%]  
-        md:text-lg'/>
-        <input  required type='password' ref={password} placeholder='Password' className='text-white p-3 min-w-[85%] mx-[7.5%] text-lg text-center  bg-gray-900 mb-[4%] rounded-md
-        ssm:text-sm ssm:mb-[2%] 
-        sm:mb-[4%] sm:py-[2%]  
-        md:text-lg'/>
-        <p className=' md:text-red-500 min-w-[85%] mx-[7.5%]  font-bold text-base  px-[4%] 
-        ssm:text-sm
-        sm:mb-[2%]'>{errorMessages}</p>
-        <button onClick={validationCheck}  className='py-2  text-white bold text-lg bg-red-700 min-w-[85%] mx-[7.5%] rounded-lg
-        ssm:text-sm ssm:mt-[4%]
-        sm:mb-[2%]  
+        <h1 className='hidden md:block md:font-bold md:text-white md:text-4xl md:py-3 md:text-center md:my-[4%]'>{isSignIn?"Sign in": "Sign up"}</h1>
+        {!isSignIn && <input  required type='text' ref={name}  placeholder='Username' className='w-[90%] mx-[5%] mb-[4%] placeholder-white font-medium  text-center text-2xl py-4 rounded-lg bg-[#5F635F] outline-none  md:block
+        md:text-white md:p-3 md:min-w-[85%] md:mx-[7.5%] md:text-lg md:text-center  md:bg-gray-900 md:mb-[4%] md:rounded-md'/>}
+        <input  required type='text' ref={email} placeholder='Email Address' className='w-[90%] mx-[5%] mb-[4%] placeholder-white font-medium  text-center text-2xl py-4 rounded-lg bg-[#5F635F] outline-none md:block
+        md:text-white md:p-3 md:min-w-[85%] md:mx-[7.5%] md:text-lg md:text-center  md:bg-gray-900 md:mb-[4%] md:rounded-md'/>
+        <input  required type='password' ref={password} placeholder='Password' className='w-[90%] mx-[5%] mb-[4%] placeholder-white font-medium  text-center text-2xl py-4 rounded-lg bg-[#5F635F] outline-none  md:block
+        md:text-white md:p-3 md:min-w-[85%] md:mx-[7.5%] md:text-lg md:text-center  md:bg-gray-900 md:mb-[4%] md:rounded-md'/>
+        <p className='w-[90%] mx-[5%]  text-red-700 font-medium  text-center text-lg  rounded-lg md:block
+        '>{errorMessages}</p>
+        <button onClick={validationCheck}  className='w-[90%] mx-[5%] mb-[4%] font-medium  text-center text-2xl py-4 rounded-lg bg-black text-white border-solid border-white border-2  md:block
+        md:py-2  md:text-white md:bold md:text-lg md:bg-red-700 md:min-w-[85%] md:mx-[7.5%] md:rounded-lg  
         md:px-4  '>{isSignIn?"Sign in": "Sign up"}</button>
-        <p className=' text-center ssm:text-sm md:mx-[10%] my-3  mb-6 cursor-pointer text-white' onClick={toggleSignIn}>{isSignIn?"New to Netflix?": "Already Registered?"} <span className='text-yellow-200'>{isSignIn?"Sign up Now": "Sign in now"}</span></p>
+        <p className=' text-center text-xl md:mx-[10%] my-3  mb-6 cursor-pointer text-white' onClick={toggleSignIn}>{isSignIn?"New to Netflix?": "Already Registered?"} <span className='text-yellow-200'>{isSignIn?"Sign up now.": "Sign in now."}</span></p>
+        <p className='text-white mt-[10%] w-[80%] mx-[10%] text-center'>Sign-in is protexted by Google reCAPTCHA to ensure you're not a bot.</p>
       </form>
       
     </div>
