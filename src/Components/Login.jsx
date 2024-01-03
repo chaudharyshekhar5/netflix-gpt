@@ -103,11 +103,11 @@ signInWithEmailAndPassword(auth,email.current.value,password.current.value)
       md:absolute md:bg-black md:mx-auto md:right-0 md:left-0 md:opacity-80  md:rounded-lg md:w-4/12 md:mt-[13%]'
       >
         <h1 className='hidden md:block md:font-bold md:text-white md:text-4xl md:py-3 md:text-center md:my-[4%]'>{isSignIn?"Sign in": "Sign up"}</h1>
-        {!isSignIn && <input  required type='text' ref={name}  placeholder='Username' className='w-[90%] mx-[5%] mb-[4%] placeholder-white font-medium  text-center text-2xl py-4 rounded-lg bg-[#5F635F] outline-none  md:block
+        {!isSignIn && <input  required type='text' ref={name}  placeholder='Username' className='w-[90%] mx-[5%] mb-[4%] placeholder-white  font-medium text-white text-center text-xl py-4 rounded-lg hover:bg-[#5F635F] bg-[#424342]  outline-none  md:block
         md:text-white md:p-3 md:min-w-[85%] md:mx-[7.5%] md:text-lg md:text-center  md:bg-gray-900 md:mb-[4%] md:rounded-md'/>}
-        <input  required type='text' ref={email} placeholder='Email Address' className='w-[90%] mx-[5%] mb-[4%] placeholder-white font-medium  text-center text-2xl py-4 rounded-lg bg-[#5F635F] outline-none md:block
+        <input  required type='text' ref={email} placeholder='Email Address' className='w-[90%] mx-[5%] mb-[4%] placeholder-white font-medium text-white text-center text-xl py-4 rounded-lg hover:bg-[#5F635F] bg-[#424342] outline-none md:block
         md:text-white md:p-3 md:min-w-[85%] md:mx-[7.5%] md:text-lg md:text-center  md:bg-gray-900 md:mb-[4%] md:rounded-md'/>
-        <input  required type='password' ref={password} placeholder='Password' className='w-[90%] mx-[5%] mb-[4%] placeholder-white font-medium  text-center text-2xl py-4 rounded-lg bg-[#5F635F] outline-none  md:block
+        <input  required type='password' ref={password} placeholder='Password' className='w-[90%] mx-[5%] mb-[4%] placeholder-white font-medium  text-center text-white text-xl py-4 rounded-lg hover:bg-[#5F635F] bg-[#424342] outline-none  md:block
         md:text-white md:p-3 md:min-w-[85%] md:mx-[7.5%] md:text-lg md:text-center  md:bg-gray-900 md:mb-[4%] md:rounded-md'/>
         <p className='w-[90%] mx-[5%]  text-red-700 font-medium  text-center text-lg  rounded-lg md:block
         '>{errorMessages}</p>
@@ -115,7 +115,7 @@ signInWithEmailAndPassword(auth,email.current.value,password.current.value)
         md:py-2  md:text-white md:bold md:text-lg md:bg-red-700 md:min-w-[85%] md:mx-[7.5%] md:rounded-lg  
         md:px-4  '>{isSignIn?"Sign in": "Sign up"}</button>
         <p className=' text-center text-xl md:mx-[10%] my-3  mb-6 cursor-pointer text-white' onClick={toggleSignIn}>{isSignIn?"New to Netflix?": "Already Registered?"} <span className='text-yellow-200'>{isSignIn?"Sign up now.": "Sign in now."}</span></p>
-        <p className='text-white mt-[10%] w-[80%] mx-[10%] text-center'>Sign-in is protexted by Google reCAPTCHA to ensure you're not a bot.</p>
+        <p className='text-white mt-[10%] w-[80%] mx-[10%] text-sm text-center'>Sign-in is protexted by Google reCAPTCHA to ensure you're not a bot.</p>
       </form>
       
     </div>

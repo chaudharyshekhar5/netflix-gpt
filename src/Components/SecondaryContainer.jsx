@@ -5,7 +5,7 @@ import MovieList from './MovieList'
 function SecondaryContainer() {
   const movies=useSelector(state=>state.movies)
   return (
-    <div className='bg-black'>
+    <div className='bg-gradient-to-b from-[#2c6767]'>
       <div className='mt-0 md:-mt-52 pl-4 md:pl-12 relative z-20 '>
       <MovieList title={"Now Playing"} movies={movies.nowPlayingMovies}/>
       <MovieList title={"Top Rated Movies"} movies={movies.topRatedMovies}/>

@@ -59,11 +59,14 @@ return ()=>unsubscribe()
 
   
   return (
-      <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between'>
-        <img className='w-32 m-[1%] z-10 md:block md:mx-0 md:w-44'
+      <div className='p-[1%] pb-0 mb-[0%] bg-[#2c6767] outline-none border-none md:block md:absolute  md:w-screen md:px-8 md:py-2 md:bg-gradient-to-b from-black md:z-10 md:flex  md:flex-row md:justify-between'>
+        <div className='flex justify-between'>
+        <img className='w-28 m-0 p-0 z-10 md:block md:mx-0 md:w-44'
          src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png" alt="Netflix_logo" />
+         <button className='p-1 px-3 mx-2 my-2 bg-red-700 text-white rounded-lg' onClick={toggleGpt}>{gpt? "Home Page" :"Movies Search"}</button>
+        </div>
       {user && (
-      <div className='text-sm flex p-2 justify-between
+      <div className=' hidden md:block md:text-sm md:flex md:p-2 md:justify-between
       sm:justify-items-start'>
         <h1   className='text-white self-center hover:text-4xl xl:hover:text-lg'>Welcome -  {user?.displayName} </h1>
         <button className='py-2 px-2 mx-4 my-2 bg-purple-800 text-white rounded-lg' onClick={toggleGpt}>{gpt? "Home Page" :"Movies Search"}</button>
