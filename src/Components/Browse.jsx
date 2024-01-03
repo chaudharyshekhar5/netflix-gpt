@@ -8,13 +8,14 @@ import usePopular from "../hooks/usePopular"
 import useTopRatedMovies from '../hooks/useTopRatedMovies';
 import useUpComingMovies from '../hooks/useUpComingMovies';
 import MovieGpt from './MovieGpt';
+import useTrailerVideo from '../hooks/useTrailerVideo';
 function Browse() {
   const gpt=useSelector(state=>state.gpt.gptToggleButton)
   useNowPlayingMovies();
   usePopular();
   useTopRatedMovies();
   useUpComingMovies();
-  
+  useTrailerVideo();
   
   return (
     <div>

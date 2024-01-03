@@ -58,25 +58,28 @@ return ()=>unsubscribe()
 },[]);
 
   
-  return (
-      <div className='p-[1%] pb-0 mb-[0%] bg-[#2c6767] outline-none border-none md:block md:absolute  md:w-screen md:px-8 md:py-2 md:bg-gradient-to-b from-black md:z-10 md:flex  md:flex-row md:justify-between'>
-        <div className='flex justify-between'>
-        <img className='w-28 m-0 p-0 z-10 md:block md:mx-0 md:w-44'
+  return (<div>
+      <div className='absolute bg-black  w-screen md:px-8 md:py-2 md:bg-transparent z-10 flex flex-col md:flex-row justify-between'>
+        {!user && (<img className='w-28 mx-0 my-[2%] md:block md:w-44  md:mx-0'
          src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png" alt="Netflix_logo" />
-         <button className='p-1 px-3 mx-2 my-2 bg-red-700 text-white rounded-lg' onClick={toggleGpt}>{gpt? "Home Page" :"Movies Search"}</button>
-        </div>
+        )}</div>   
       {user && (
-      <div className=' hidden md:block md:text-sm md:flex md:p-2 md:justify-between
-      sm:justify-items-start'>
-        <h1   className='text-white self-center hover:text-4xl xl:hover:text-lg'>Welcome -  {user?.displayName} </h1>
-        <button className='py-2 px-2 mx-4 my-2 bg-purple-800 text-white rounded-lg' onClick={toggleGpt}>{gpt? "Home Page" :"Movies Search"}</button>
+        <div className='absolute  md:absolute bg-[#2c6767] py-1 md:bg-transparent  w-screen md:w-screen md:px-8  z-10 md:z-10 flex md:flex flex-row md:flex-row justify-between md:justify-between md:py-[0%]'>
+        <img className='w-28 mx-0 my-[2%] md:block md:w-44  md:mx-0 md:my-[0%]'
+         src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png" alt="Netflix_logo" />
+
+      <div className='flex justify-between'>
+        <h1   className=' hidden md:block md:self-center md:text-white  md:hover:text-4xl'>Welcome -  {user?.displayName} </h1>
+        <button className=' bg-red-700 text-sm text-white md:self-center mr-3 self-center px-3 py-1 rounded  md:block md:py-2 md:px-2 md:mx-4  md:bg-red-700 md:text-white md:rounded-lg' onClick={toggleGpt}>{gpt? "Home Page" :"Movies Search"}</button>
       <div className='flex'>
-      <img className=" w-10 h-10 self-center" src="https://www.mobmet.com/wp-content/uploads/2021/12/Netflix-1.jpg" alt="Account-logo" />
-      <button onClick={checkSignout} className="font-bold text-white pl-1 hover:text-lg ">Sign Out</button>
+      <img className=" hidden md:block md:self-center md:w-10 md:h-10 " src="https://www.mobmet.com/wp-content/uploads/2021/12/Netflix-1.jpg" alt="Account-logo" />
+      <button onClick={checkSignout} className="bg-red-700 mr-4 text-sm md:self-center text-white self-center px-3 py-1 rounded md:block md:font-bold md:text-white md:bg-none md:ml-2 md:hover:text-lg ">Sign Out</button>
+      </div>
       </div>
       </div>
       )}
-      </div>)}
+      </div>
+      )}
       
 
 
