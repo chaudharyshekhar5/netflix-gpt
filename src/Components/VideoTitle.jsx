@@ -1,21 +1,4 @@
-// import React from 'react'
 
-// function VideoTitle({title,overview}) {
-//   return (
-//     <div className='hidden md:block
-//     md:w-screen md:aspect-video md:pt-[10%]  md:px-10 md:absolute md:text-white md:bg-gradient-to-r from-black'>
-//       <h1 className='hidden md:block
-//       md:text-xl md:font-extrabold md:underline md:underline-offset-4'>{title}</h1>
-//       <p className="hidden md:block inline-block py-6 md:text-sm md:w-5/12">{overview.substring(0,400)}</p>
-//       <div className='my-4 md:m-0'>
-//         <button className='bg-white  text-black py-1 px-2 text-lg  rounded-lg hover:bg-opacity-80 mr-[2%]'> ▶️ Play</button>
-//         <button className='bg-white  text-black py-1 px-2 text-lg  rounded-lg hover:bg-opacity-80'>❗More-info</button>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default VideoTitle
 import React from 'react'
 import { useSelector } from 'react-redux'
 import useTrailerVideo from '../hooks/useTrailerVideo'

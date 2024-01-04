@@ -3,7 +3,7 @@ const gptSlice=createSlice({
     name:"gpt",
     initialState:{
         gptToggleButton:false,
-        gptInputData:null,
+        gptInputData:"",
         gptResult:null,
     },
     reducers:{
