@@ -40,10 +40,10 @@ function VideoTitle() {
         ></iframe>
       </div>
       <div className='bg-black'>
-        <h1 className='text-white text-2xl p-[3%] pb-[0%] font-extrabold'>{videoId?.original_title}</h1>
-        <p className='text-white text-sm p-[3%] pt-[0%] font-normal'>Release Date:  {videoId?.release_date}</p>
+        <h1 className='text-white text-2xl p-[3%] pb-[0%] font-extrabold'>{videoId?.original_title ? videoId?.original_title: videoId?.name }</h1>
+        <p className='text-white text-sm p-[3%] pt-[0%] font-normal'> {videoId?.release_date}</p>
         <button onClick={()=>Navigate("/browser")} className='w-[90%] bg-red-700 text-white py-[2%] rounded mx-[5%] my-[2%]'>⬅️Previous Page</button>
-        <button className='w-[90%] bg-white text-black py-[2%] rounded mx-[5%] my-[2%]'>▶️ Resume</button>
+        <button className='w-[90%]  bg-white text-black py-[2%] rounded mx-[5%] my-[2%]'>▶️ Resume</button>
         <button className='w-[90%] bg-gray-700 text-white py-[2%] rounded mx-[5%] my-[2%]'>⬇️ Download</button>
         <h3 className='text-white w-[90%] mx-[5%] mt-[4%]'>{videoId?.overview}</h3>
       </div>
