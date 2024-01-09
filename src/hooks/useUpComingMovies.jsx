@@ -9,7 +9,6 @@ const useUpComingMovies=()=>{
   const data=await fetch('https://api.themoviedb.org/3/movie/upcoming?page=1', options)
   const json=await data.json()
   
-  
   dispatch(
     addUpcomingMovies(
       json.results

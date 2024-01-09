@@ -9,7 +9,15 @@ import useTopRatedMovies from '../hooks/useTopRatedMovies';
 import useUpComingMovies from '../hooks/useUpComingMovies';
 import MovieGpt from './MovieGpt';
 import useTrailerVideo from '../hooks/useTrailerVideo';
+import { useNavigate } from 'react-router-dom';
+
 function Browse() {
+  
+const navigate = useNavigate();
+
+const refreshPage = () => {
+    navigate(0);
+}
   const gpt=useSelector(state=>state.gpt.gptToggleButton)
   useNowPlayingMovies();
   usePopular();

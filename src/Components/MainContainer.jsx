@@ -11,14 +11,10 @@ function MainContainer() {
     if(!movies){
         return
     }
-
     const mainMovie=movies[0]
-    // console.log(mainMovie)
 
     const {original_title,overview}=mainMovie;
-    // console.log(id) 
   return (<div className=' bg-[#2c6767] pt-[20%]  md:block  md:bg-black md:pt-0'>
-    {/* <VideoTitle title={idm.original_title} overview={idm.overview}/> */}
     <VideoBackground movieId={idm.id}/>
 
 

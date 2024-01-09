@@ -11,8 +11,9 @@ function VideoBackground({movieId}) {
   return (<div>
     <div className='w-screen '>
       <iframe className='hidden md:block w-screen  aspect-video'
-      src={"https://www.youtube.com/embed/"+trailerId+"?&autoplay=1&mute=1&rel=0&showinfo=1&controls=0&autohide=1"} 
+      src={"https://www.youtube.com/embed/"+trailerId+"?&autoplay=1&rel=0&mute=1&showinfo=1&controls=0&cc_lang_pref=fr&cc_load_policy=1"} 
       title="YouTube video player"
+      FrameBorder="0" 
        allow="accelerometer; 
        autoplay; clipboard-write; 
        encrypted-media; gyroscope;
