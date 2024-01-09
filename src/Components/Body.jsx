@@ -8,9 +8,9 @@ import VideoTitle from './VideoTitle';
 function Body() {
   
   return (
-    <Router>
+    <Router basename='/'>
       
-      <Routes>
+      <Routes >
         <Route path="/" element={<Login/>}></Route>
         <Route path="browser" element={<Browse/>}></Route>
         <Route path="gpt" element={<MovieGpt/>}></Route>
