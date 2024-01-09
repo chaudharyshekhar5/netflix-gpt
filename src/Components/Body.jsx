@@ -9,7 +9,7 @@ function Body() {
   return (
     <Router>
       
-      <Routes basename="/">
+      <Routes path="/">
         <Route path="/" element={<Login/>}></Route>
         <Route path="browser" element={<Browse/>}></Route>
         <Route path="gpt" element={<MovieGpt/>}></Route>
