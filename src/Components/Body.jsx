@@ -8,7 +8,7 @@ import VideoTitle from './VideoTitle';
 function Body() {
   
   return (
-    <Router basename="/">
+    <Router>
       
       <Routes>
         <Route path="/" element={<Login/>}></Route>

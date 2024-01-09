@@ -14,8 +14,9 @@ function MainContainer() {
     const mainMovie=movies[0]
 
     const {original_title,overview}=mainMovie;
+    localStorage.setItem("VideoBackground",idm)
   return (<div className=' bg-[#2c6767] pt-[20%]  md:block  md:bg-black md:pt-0'>
-    <VideoBackground movieId={idm.id}/>
+    <VideoBackground movieId={idm?.id?idm?.id:localStorage.getItem("VideoBackground")}/>
 
 
     

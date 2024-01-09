@@ -99,7 +99,7 @@ signInWithEmailAndPassword(auth,email.current.value,password.current.value)
       </div>
       <form onSubmit={(e)=>e.preventDefault()} 
       // className='w-full md:w-3/12 absolute p-8 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80'>
-      className='absolute w-screen  mt-[40%] bg-black  md:h-block
+      className='absolute w-screen  mt-[40%] bg-black  sm:h-block sm:mt-[50%]
       md:absolute md:bg-black md:mx-auto md:right-0 md:left-0 md:opacity-80  md:rounded-lg md:w-4/12 md:mt-[13%]'
       >
         <h1 className='hidden md:block md:font-bold md:text-white md:text-4xl md:py-3 md:text-center md:my-[4%]'>{isSignIn?"Sign in": "Sign up"}</h1>

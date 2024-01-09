@@ -10,7 +10,10 @@ import { addVideo } from '../Utils/MoviesSlice'
 function MovieCard({movies,id,data}) {
   const dispatch=useDispatch()
   const cardClick=()=>{
-    // console.log(id)
+  localStorage.setItem("MovieId",data?.id)
+  localStorage.setItem("MovieName",data?.original_title)
+  localStorage.setItem("MovieDate",data?.release_date)
+  localStorage.setItem("MovieDescription",data?.overview)
     return(
     dispatch(
       addVideoInfo(data)

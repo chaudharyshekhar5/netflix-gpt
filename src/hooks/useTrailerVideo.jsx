@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from 'react-redux'
 
 
 const useTrailerVideo=(movieId)=> {
-  // console.log(movieId)
   const dispatch=useDispatch()
+
   const getMovieVideos=async()=>{
     const data=await fetch("https://api.themoviedb.org/3/movie/"+movieId+"/videos", options)
     const json=await data.json()
@@ -15,7 +15,7 @@ const useTrailerVideo=(movieId)=> {
     const trailer= trailers[0]?.key?trailers[0]?.key:json[0]?.key;
     dispatch(addTrailerVideo
       (trailer))
-      //  console.log(trailer)
+    localStorage.setItem("VideoBackgroundUrl",trailer)
   }
   }
   useEffect(()=>{

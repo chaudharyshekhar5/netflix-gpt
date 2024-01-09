@@ -3,11 +3,12 @@ import {useSelector } from 'react-redux'
 import useTrailerVideo from '../hooks/useTrailerVideo'
 
 function VideoBackground({movieId}) {
-  const trailerId=useSelector(state=>state?.movies?.trailerVideo)
+  const trailerId=useSelector(state=>state?.movies?.trailerVideo?state?.movies?.trailerVideo:localStorage.getItem("VideoBackgroundUrl"))
   useTrailerVideo(movieId)
   const Mobile_Movie=useSelector(state=>state?.movies?.upComingMovies)
   const mobile_photo=Mobile_Movie!==null ? Mobile_Movie[4]?.poster_path : Mobile_Movie?.poster_path
-  
+  console.log(trailerId)
+  console.log(localStorage.getItem("VideoBackgroundUrl"))
   return (<div>
     <div className='w-screen '>
       <iframe className='hidden md:block w-screen  aspect-video'
