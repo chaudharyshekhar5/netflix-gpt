@@ -7,8 +7,8 @@ function VideoBackground({movieId}) {
   useTrailerVideo(movieId)
   const Mobile_Movie=useSelector(state=>state?.movies?.upComingMovies)
   const mobile_photo=Mobile_Movie!==null ? Mobile_Movie[4]?.poster_path : Mobile_Movie?.poster_path
-  console.log(trailerId)
-  console.log(localStorage.getItem("VideoBackgroundUrl"))
+  // console.log(trailerId)
+  // console.log(localStorage.getItem("VideoBackgroundUrl"))
   return (<div>
     <div className='w-screen '>
       <iframe className='hidden md:block w-screen  aspect-video'
